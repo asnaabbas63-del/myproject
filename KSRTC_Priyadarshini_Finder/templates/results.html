@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="header">
+    <h1>Search Results</h1>
+    <p>Stop: {{ stop }}</p>
+</div>
+
+<div class="container">
+
+{% if buses %}
+    {% for bus in buses %}
+    <div class="bus-card">
+
+        <h2>{{ bus[1] }}</h2>
+
+        <p><b>Bus No:</b> {{ bus[0] }}</p>
+        <p><b>Start:</b> {{ bus[2] }}</p>
+        <p><b>Destination:</b> {{ bus[3] }}</p>
+        <p><b>Time:</b> {{ bus[4] }}</p>
+        <p><b>Bus Type:</b> {{ bus[5] }}</p>
+        <p><b>Stops:</b> {{ bus[6] }}</p>
+
+        {% if bus[5] == "Ordinary" or bus[5] == "Fast Passenger" %}
+            <p class="eligible">✅ Priyadarshini Eligible</p>
+        {% else %}
+            <p class="not-eligible">❌ Not Eligible</p>
+        {% endif %}
+
+    </div>
+    {% endfor %}
+{% else %}
+    <div class="no-result">
+        ❌ No buses found for this stop
+    </div>
+{% endif %}
+
+</div>
+
+<div class="footer">
+    KSRTC Kerala | Public Bus Information System
+</div>
+
+</body>
+</html>

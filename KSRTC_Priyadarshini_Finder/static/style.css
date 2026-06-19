@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+}
+
+.header {
+    background: linear-gradient(90deg, #8b0000, #c62828);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 34px;
+}
+
+.header p {
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.clock {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.search-box {
+    background: white;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+select, button {
+    padding: 14px;
+    font-size: 17px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+select {
+    width: 260px;
+}
+
+button {
+    background: #d32f2f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #b71c1c;
+}
+
+.bus-card {
+    background: white;
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+.bus-card h2 {
+    color: #b71c1c;
+}
+
+.eligible {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.not-eligible {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.no-result {
+    background: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 22px;
+}
+
+.footer {
+    margin-top: 40px;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    select {
+        width: 90%;
+    }
+}
