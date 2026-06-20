@@ -1,47 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>KSRTC Priyadarshini Finder</title>
+    <title>KSRTC Bus Finder</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<div class="header">
-    <h1>🚌 KSRTC Priyadarshini Bus Finder</h1>
-    <p>Palakkad District Bus Search Portal</p>
-    <div class="clock" id="clock"></div>
-</div>
+    <header class="hero">
+        <h1>🚌 KSRTC Priyadarshini Bus Finder</h1>
+        <p>Find buses and check scheme eligibility instantly</p>
+    </header>
 
-<div class="container">
-    <div class="search-box">
-        <h2>Search Bus by Stop</h2>
-
+    <div class="search-container">
         <form action="/search" method="POST">
+            <label>Select Bus Stop</label>
+
             <select name="stop" required>
-                <option value="">Select Stop</option>
                 {% for stop in stops %}
                 <option value="{{ stop }}">{{ stop }}</option>
                 {% endfor %}
             </select>
 
-            <br>
             <button type="submit">Search Bus</button>
         </form>
     </div>
-</div>
 
-<div class="footer">
-    KSRTC Kerala | Priyadarshini Scheme Portal
-</div>
-
-<script>
-function updateClock() {
-    const now = new Date();
-    document.getElementById("clock").innerHTML = now.toLocaleString();
-}
-setInterval(updateClock, 1000);
-updateClock();
-</script>
+    <footer>
+        KSRTC Kerala | Priyadarshini Scheme Portal
+    </footer>
 
 </body>
 </html>

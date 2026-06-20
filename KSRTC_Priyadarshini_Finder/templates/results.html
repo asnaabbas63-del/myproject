@@ -6,45 +6,44 @@
 </head>
 <body>
 
-<div class="header">
-    <h1>Search Results</h1>
-    <p>Stop: {{ stop }}</p>
-</div>
+    <header class="hero">
+        <h1>Search Results</h1>
+        <p>Stop: {{ stop }}</p>
+    </header>
 
-<div class="container">
+    <div class="results-container">
 
-{% if buses %}
-    {% for bus in buses %}
-    <div class="bus-card">
+        {% if buses %}
+            {% for bus in buses %}
+            <div class="bus-card">
+                <h2>{{ bus.route_name }}</h2>
 
-        <h2>{{ bus[1] }}</h2>
+                <p><strong>Bus No:</strong> {{ bus.bus_no }}</p>
+                <p><strong>Start:</strong> {{ bus.start_point }}</p>
+                <p><strong>Destination:</strong> {{ bus.end_point }}</p>
+                <p><strong>Time:</strong> {{ bus.timing }}</p>
+                <p><strong>Bus Type:</strong> {{ bus.bus_type }}</p>
+                <p><strong>Stops:</strong> {{ bus.stops }}</p>
 
-        <p><b>Bus No:</b> {{ bus[0] }}</p>
-        <p><b>Start:</b> {{ bus[2] }}</p>
-        <p><b>Destination:</b> {{ bus[3] }}</p>
-        <p><b>Time:</b> {{ bus[4] }}</p>
-        <p><b>Bus Type:</b> {{ bus[5] }}</p>
-        <p><b>Stops:</b> {{ bus[6] }}</p>
-
-        {% if bus[5] == "Ordinary" or bus[5] == "Fast Passenger" %}
-            <p class="eligible">✅ Priyadarshini Eligible</p>
+                {% if bus.eligible %}
+                    <div class="badge green">✅ Priyadarshini Eligible</div>
+                {% else %}
+                    <div class="badge red">❌ Not Eligible</div>
+                {% endif %}
+            </div>
+            {% endfor %}
         {% else %}
-            <p class="not-eligible">❌ Not Eligible</p>
+            <div class="no-results">
+                No buses found for this stop.
+            </div>
         {% endif %}
 
+        <a href="/" class="back-btn">← Back to Search</a>
     </div>
-    {% endfor %}
-{% else %}
-    <div class="no-result">
-        ❌ No buses found for this stop
-    </div>
-{% endif %}
 
-</div>
-
-<div class="footer">
-    KSRTC Kerala | Public Bus Information System
-</div>
+    <footer>
+        KSRTC Kerala | Public Bus Information System
+    </footer>
 
 </body>
 </html>
