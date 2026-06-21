@@ -14,7 +14,9 @@ def index():
         "Koduvayur", "Alathur", "Vadakkencherry","Vandithavalam", "Kuzhalmannam",
         "Nemmara", "Kollengode", "Chittur", "Tattamangalam",
         "Meenakshipuram", "Pollachi", "Kozhikode", "Thrissur",
-        "Agali", "Attappadi", "Alanallur", "Govindapuram"
+        "Agali", "Attappadi", "Alanallur", "Govindapuram","Nelliyampathy",
+        "Pothundi Dam",
+         
     ]
 
     stops = sorted(list(set(stops)))

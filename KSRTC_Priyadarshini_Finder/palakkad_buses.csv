@@ -94,3 +94,7 @@ PLKD119,Palakkad-Pollachi,Palakkad KSRTC,Pollachi,08:50 AM,Town-to-Town,"Koduvay
 PLKD120,Palakkad-Meenakshipuram,Palakkad KSRTC,Meenakshipuram,12:15 PM,Ordinary,"Kallepulli,Polpully,Vandithavalam,Chittur Stand,Tattamangalam"
 PLKD121,Palakkad-Pollachi,Palakkad KSRTC,Pollachi,03:10 PM,Ordinary,"Koduvayur,Vandithavalam,Chittur Stand,Meenakshipuram,Gopalapuram"
 PLKD122,Meenakshipuram-Palakkad,Meenakshipuram,Palakkad KSRTC,05:30 PM,Town-to-Town,"Tattamangalam,Chittur Stand,Vandithavalam,Polpully,Kallepulli"
+Bus no,route Name,Start Point,End point,Timing,Bus type,Stops
+PLKD130,Palakkad-Nelliyampathy,Palakkad KSRTC,Nelliyampathy (Padagiri),06:15 AM,Ordinary,"Kuzhalmannam,Nemmara,Nenmara,Pothundi Dam,Kaatty,Padagiri"
+PLKD131,Palakkad-Nelliyampathy,Palakkad KSRTC,Nelliyampathy (Padagiri),11:30 AM,Ordinary,"Kuzhalmannam,Nemmara,Nenmara,Pothundi Dam,Kaatty,Padagiri"
+PLKD132,Palakkad-Nelliyampathy,Palakkad KSRTC,Nelliyampathy (Padagiri),04:00 PM,Ordinary,"Kuzhalmannam,Nemmara,Nenmara,Pothundi Dam,Kaatty,Padagiri"
