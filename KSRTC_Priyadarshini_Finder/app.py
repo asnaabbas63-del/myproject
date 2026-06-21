@@ -11,10 +11,10 @@ def index():
         "Mannarkkad", "Kumaramputhur", "Perinthalmanna",
         "Ottapalam", "Shoranur", "Cherpulassery", "Pattambi",
         "Vaniamkulam", "Parli", "Pathiripala", "Mankara",
-        "Koduvayur", "Alathur", "Vadakkencherry", "Kuzhalmannam",
+        "Koduvayur", "Alathur", "Vadakkencherry","Vandithavalam", "Kuzhalmannam",
         "Nemmara", "Kollengode", "Chittur", "Tattamangalam",
         "Meenakshipuram", "Pollachi", "Kozhikode", "Thrissur",
-        "Agali", "Attappadi", "Alanallur"
+        "Agali", "Attappadi", "Alanallur", "Govindapuram"
     ]
 
     stops = sorted(list(set(stops)))
@@ -39,9 +39,25 @@ def search():
     buses = cursor.fetchall()
     conn.close()
 
+    eligible_types = [
+        "shuttle",
+        "city ordinary",
+        "priyadarshini",
+        "ordinary",
+        "regular fast",
+        "limited stop ordinary",
+        "town-to-town",
+        "fair stage ordinary",
+        "point to point ordinary",
+        "gramavandi"
+    ]
+
     processed_buses = []
 
     for bus in buses:
+        bus_type = str(bus[5]).lower().strip()
+        eligible = any(t in bus_type for t in eligible_types)
+
         processed_buses.append({
             "bus_no": bus[0],
             "route_name": bus[1],
@@ -50,7 +66,7 @@ def search():
             "timing": bus[4],
             "bus_type": bus[5],
             "stops": bus[6],
-            "eligible": "shuttle" not in bus[5].lower()
+            "eligible": eligible
         })
 
     return render_template(
@@ -61,4 +77,4 @@ def search():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)

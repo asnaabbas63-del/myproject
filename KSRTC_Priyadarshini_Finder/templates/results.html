@@ -1,49 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Search Results</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
 </head>
 <body>
 
-    <header class="hero">
-        <h1>Search Results</h1>
-        <p>Stop: {{ stop }}</p>
-    </header>
+<div class="container">
+    <h1 style="color:white;">Search Results</h1>
 
-    <div class="results-container">
+    {% if buses %}
+        {% for bus in buses %}
+        <div class="bus-card">
+            <h2>{{ bus.route_name }}</h2>
+            <p>Bus No: {{ bus.bus_no }}</p>
+            <p>Start: {{ bus.start_point }}</p>
+            <p>Destination: {{ bus.end_point }}</p>
+            <p>Time: {{ bus.timing }}</p>
+            <p>Bus Type: {{ bus.bus_type }}</p>
 
-        {% if buses %}
-            {% for bus in buses %}
-            <div class="bus-card">
-                <h2>{{ bus.route_name }}</h2>
+            {% if bus.eligible %}
+                <p style="color:green;">പ്രിയദർശിനി / PRIYADARSHINI</p>
+            {% else %}
+                <p style="color:red;">പ്രിയദർശിനിയല്ല / NOT PRIYADARSHINI</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    {% endif %}
 
-                <p><strong>Bus No:</strong> {{ bus.bus_no }}</p>
-                <p><strong>Start:</strong> {{ bus.start_point }}</p>
-                <p><strong>Destination:</strong> {{ bus.end_point }}</p>
-                <p><strong>Time:</strong> {{ bus.timing }}</p>
-                <p><strong>Bus Type:</strong> {{ bus.bus_type }}</p>
-                <p><strong>Stops:</strong> {{ bus.stops }}</p>
-
-                {% if bus.eligible %}
-                    <div class="badge green">✅ Priyadarshini Eligible</div>
-                {% else %}
-                    <div class="badge red">❌ Not Eligible</div>
-                {% endif %}
-            </div>
-            {% endfor %}
-        {% else %}
-            <div class="no-results">
-                No buses found for this stop.
-            </div>
-        {% endif %}
-
-        <a href="/" class="back-btn">← Back to Search</a>
-    </div>
-
-    <footer>
-        KSRTC Kerala | Public Bus Information System
-    </footer>
+    <a href="/" style="color:white;">Back</a>
+</div>
 
 </body>
 </html>

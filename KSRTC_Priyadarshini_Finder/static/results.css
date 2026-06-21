@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/static/ksrtc_building.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: Arial, sans-serif;
+}
+
+/* Dark overlay so text is readable */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.bus-card {
+    background: rgba(255, 255, 255, 0.88);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}

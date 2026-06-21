@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>KSRTC Bus Finder</title>
+    <title>Palakkad KSRTC Finder</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <header class="hero">
-        <h1>🚌 KSRTC Priyadarshini Bus Finder</h1>
-        <p>Find buses and check scheme eligibility instantly</p>
-    </header>
+<div class="hero">
+    <div class="overlay"></div>
 
-    <div class="search-container">
-        <form action="/search" method="POST">
-            <label>Select Bus Stop</label>
+    <nav>
+        <div class="logo">KSRTC</div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Routes</a>
+            <a href="#">About</a>
+        </div>
+    </nav>
 
-            <select name="stop" required>
+    <div class="hero-content">
+        <h1>PALAKKAD</h1>
+        <p>Find KSRTC buses instantly</p>
+
+        <form action="/search" method="POST" class="search-box">
+            <select name="stop">
                 {% for stop in stops %}
-                <option value="{{ stop }}">{{ stop }}</option>
+                <option>{{ stop }}</option>
                 {% endfor %}
             </select>
-
-            <button type="submit">Search Bus</button>
+            <button type="submit">SEARCH BUS</button>
         </form>
     </div>
-
-    <footer>
-        KSRTC Kerala | Priyadarshini Scheme Portal
-    </footer>
+</div>
 
 </body>
 </html>
