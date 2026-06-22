@@ -15,7 +15,7 @@ def index():
         "Nemmara", "Kollengode", "Chittur", "Tattamangalam",
         "Meenakshipuram", "Pollachi", "Kozhikode", "Thrissur",
         "Agali", "Attappadi", "Alanallur", "Govindapuram","Nelliyampathy",
-        "Pothundi Dam",
+        "Pothundi Dam","Velanthavalam","Kozhinjampara","Kallepulli"
          
     ]
 

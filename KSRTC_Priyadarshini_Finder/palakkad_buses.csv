@@ -98,3 +98,9 @@ Bus no,route Name,Start Point,End point,Timing,Bus type,Stops
 PLKD130,Palakkad-Nelliyampathy,Palakkad KSRTC,Nelliyampathy (Padagiri),06:15 AM,Ordinary,"Kuzhalmannam,Nemmara,Nenmara,Pothundi Dam,Kaatty,Padagiri"
 PLKD131,Palakkad-Nelliyampathy,Palakkad KSRTC,Nelliyampathy (Padagiri),11:30 AM,Ordinary,"Kuzhalmannam,Nemmara,Nenmara,Pothundi Dam,Kaatty,Padagiri"
 PLKD132,Palakkad-Nelliyampathy,Palakkad KSRTC,Nelliyampathy (Padagiri),04:00 PM,Ordinary,"Kuzhalmannam,Nemmara,Nenmara,Pothundi Dam,Kaatty,Padagiri"
+Bus no,route Name,Start Point,End point,Timing,Bus type,Stops
+PLKD140,Palakkad-Kozhinjampara,Palakkad KSRTC,Kozhinjampara,07:15 AM,Ordinary,"Kallepulli,Puthunagaram,Chittur Stand,Kozhinjampara"
+PLKD141,Palakkad-Pollachi,Palakkad KSRTC,Pollachi,10:30 AM,Town-to-Town,"Kallepulli,Chittur Stand,Kozhinjampara,Gopalapuram"
+PLKD142,Palakkad-Kozhinjampara,Palakkad KSRTC,Kozhinjampara,01:45 PM,Ordinary,"Kallepulli,Puthunagaram,Chittur Stand,Kozhinjampara"
+PLKD143,Palakkad-Velanthavalam,Palakkad KSRTC,Velanthavalam,04:30 PM,Ordinary,"Kallepulli,Chittur Stand,Kozhinjampara,Velanthavalam"
+PLKD144,Kozhinjampara-Palakkad,Kozhinjampara,Palakkad KSRTC,06:00 PM,Ordinary,"Chittur Stand,Puthunagaram,Kallepulli"
